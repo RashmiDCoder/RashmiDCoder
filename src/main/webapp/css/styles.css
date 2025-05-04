@@ -1,0 +1,450 @@
+/* reset & globals */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: 'Segoe UI', sans-serif; }
+
+/* full‐screen, center content, gradient background */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(to bottom, #5A8DEE 0%, #00F2F1 100%);
+    text-align: center;
+    padding: 20px;
+}
+
+/* logo + subtitle */
+.logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* form */
+.form {
+    width: 100%;
+    max-width: 360px;
+}
+.form .input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+.form .input::placeholder {
+    color: rgba(0,0,0,0.3);
+}
+.form .button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 25px;
+    background-color: #3A76F0;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+.form .button:hover {
+    background-color: #3368D1;
+}
+
+/* small link under button */
+.forgot {
+    display: block;
+    margin: 12px 0;
+    font-size: 0.9rem;
+    color: white;
+    text-decoration: none;
+    opacity: .9;
+}
+.forgot:hover { opacity: 1; }
+
+/* footer signup/login switch */
+.switch {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+}
+.switch a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 6px;
+}
+.switch a:hover { text-decoration: underline; }
+/* Home page specific */
+.home-container .home-text {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.home-container .home-button {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 25px;
+    background-color: #3A76F0;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color .2s;
+}
+.home-container .home-button:hover {
+    background-color: #3368D1;
+}
+/* ── Nav Bar ───────────────────────────────────────────────────────────────── */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+header .logo-small {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: auto;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: opacity .2s;
+}
+header nav a:hover {
+    opacity: 0.7;
+}
+
+header .user-info {
+    margin-left: auto;
+    color: white;
+    font-size: 0.9rem;
+}
+/* -------- Rules Page Container -------- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px; /* space for fixed navbar */
+    padding-bottom: 40px;
+}
+
+/* -------- Content Box (card style) -------- */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* -------- Rules Title -------- */
+.rules-title {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* -------- Rules List -------- */
+.rules-list {
+    font-size: 1.5rem;
+    line-height: 2.2;
+    color: #ffffff;
+    list-style: decimal inside;
+    text-align: left;
+    padding: 0;
+}
+/* -------- Fullscreen About Page -------- */
+/* Background Theme */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+.logo-small {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.user-info {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e0ffff;
+}
+
+/* Main Section */
+.about-main {
+    margin-top: 120px;
+    padding: 0 60px;
+    color: white;
+}
+
+/* About Us Title */
+.about-page-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* About Description */
+.about-description {
+    font-size: 1.4rem;
+    line-height: 2;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+/* Team Heading */
+.team-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Team Container */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 60px;
+}
+
+/* Team Member Card */
+.team-member {
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Image Container */
+.team-photo-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 3px solid white;
+}
+
+/* Team Image */
+.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Member Name */
+.team-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Member Email */
+.team-email {
+    font-size: 0.9rem;
+    color: #e0f7ff;
+}
+
+/* Footer */
+.contact-footer {
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.contact-footer h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.contact-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-link {
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+/* Body background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-small {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.user-info {
+    font-weight: bold;
+}
+
+/* Main section for categories */
+.category-main {
+    padding: 120px 60px 60px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.category-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+/* Grid layout: 4 columns */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Category cards */
+.category-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image container */
+.category-img-container {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Category name */
+.category-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
