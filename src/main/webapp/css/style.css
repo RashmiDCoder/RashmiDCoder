@@ -1,0 +1,88 @@
+/* Reset and box sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page centering */
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Body background image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: 
+        linear-gradient(to bottom, rgba(90, 141, 238, 0.7) 0%, rgba(0, 242, 241, 0.7) 100%),
+        url('https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455640.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Main container */
+.container {
+    padding: 40px;
+    width: 450px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Headings */
+h2, h1 {
+    color: #333;
+}
+
+/* Form inputs, selects, and buttons */
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 25px;
+    border: 2px solid rgba(255,255,255,0.6);
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+}
+
+/* Button styles */
+button {
+    background: #3368D1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Links */
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
